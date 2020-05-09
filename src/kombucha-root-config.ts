@@ -10,8 +10,8 @@ console.log("Loading Kombucha Root Config");
 // });
 
 registerApplication({
-  name: "products",
-  app: () => System.import("products"),
+  name: "@kombucha/products",
+  app: () => System.import("@kombucha/products"),
   activeWhen: () => true,
 });
 
