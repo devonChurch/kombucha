@@ -1,0 +1,25 @@
+{
+  "name": "@kombucha/settings",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "watch:portal": "webpack-dev-server --port 9003",
+    "build:portal": "webpack -p --progress"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/runtime": "^7.8.7",
+    "clean-webpack-plugin": "^0.1.19",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.15",
+    "angular": "^1.6.9",
+    "html-loader": "^0.5.5",
+    "single-spa-angular1": "^2.7.0"
+  }
+}

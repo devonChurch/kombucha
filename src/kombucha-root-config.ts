@@ -4,7 +4,7 @@ import * as isActive from "./activity-functions";
 console.log("Loading Kombucha Root Config");
 
 setTimeout(() => {
-  window.history.pushState({}, "", "/vue");
+  // window.history.pushState({}, "", "/settings");
 }, 3000);
 
 // registerApplication({
@@ -16,7 +16,14 @@ setTimeout(() => {
 registerApplication({
   name: "@kombucha/products",
   app: () => System.import("@kombucha/products"),
-  activeWhen: (location) => location.pathname.startsWith("/vue"),
+  activeWhen: (location) => location.pathname.startsWith("/products"),
+});
+
+registerApplication({
+  name: "@kombucha/settings",
+  app: () => System.import("@kombucha/settings"),
+  // activeWhen: (location) => location.pathname === "/",
+  activeWhen: (location) => location.pathname.startsWith("/settings"),
 });
 
 start({
