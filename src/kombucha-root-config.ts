@@ -3,6 +3,10 @@ import * as isActive from "./activity-functions";
 
 console.log("Loading Kombucha Root Config");
 
+setTimeout(() => {
+  window.history.pushState({}, "", "/vue");
+}, 3000);
+
 // registerApplication({
 //   name: "@kombucha/navbar",
 //   app: () => System.import("@kombucha/navbar"),
@@ -12,7 +16,7 @@ console.log("Loading Kombucha Root Config");
 registerApplication({
   name: "@kombucha/products",
   app: () => System.import("@kombucha/products"),
-  activeWhen: () => true,
+  activeWhen: (location) => location.pathname.startsWith("/vue"),
 });
 
 start({
