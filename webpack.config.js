@@ -3,6 +3,8 @@ const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (webpackConfigEnv) => {
+  console.log("Webpack Config", webpackConfigEnv);
+
   const defaultConfig = singleSpaDefaults({
     orgName: "kombucha",
     projectName: "root-config",

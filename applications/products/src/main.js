@@ -10,6 +10,7 @@ const vueLifecycles = singleSpaVue({
   Vue,
   appOptions: {
     render: (h) => h(App),
+    // el: '#a-special-container',
   },
 });
 
