@@ -1,12 +1,6 @@
 import { registerApplication, start } from "single-spa";
 import * as isActive from "./activity-functions";
 
-console.log("Loading Kombucha Root Config");
-
-setTimeout(() => {
-  // window.history.pushState({}, "", "/settings");
-}, 3000);
-
 // registerApplication({
 //   name: "@kombucha/navbar",
 //   app: () => System.import("@kombucha/navbar"),
@@ -16,13 +10,14 @@ setTimeout(() => {
 registerApplication({
   name: "@kombucha/products",
   app: () => System.import("@kombucha/products"),
-  activeWhen: (location) => location.pathname.startsWith("/products"),
+  activeWhen: (location) =>
+    location.pathname === "/products" ||
+    ["/about"].some((path) => location.pathname.startsWith(path)),
 });
 
 registerApplication({
   name: "@kombucha/settings",
   app: () => System.import("@kombucha/settings"),
-  // activeWhen: (location) => location.pathname === "/",
   activeWhen: (location) => location.pathname.startsWith("/settings"),
 });
 
