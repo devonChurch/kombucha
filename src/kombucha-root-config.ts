@@ -11,8 +11,8 @@ registerApplication({
   name: "@kombucha/products",
   app: () => System.import("@kombucha/products"),
   activeWhen: (location) =>
-    location.pathname === "/products" ||
-    ["/about"].some((path) => location.pathname.startsWith(path)),
+    location.pathname === "/" ||
+    ["/purchases"].some((path) => location.pathname.startsWith(path)),
 });
 
 registerApplication({

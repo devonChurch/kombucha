@@ -22,7 +22,7 @@
         "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
         "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.5/dist/vue-router.min.js",
         "@kombucha/root-config": "//localhost:9000/kombucha-root-config.js",
-        "@kombucha/products": "//localhost:5000/js/app.075b1d65.js",
+        "@kombucha/products": "//localhost:5000/app.js",
         "@kombucha/settings": "//localhost:5001/singleSpaEntry.js"
       }
     }
@@ -38,7 +38,7 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.3.1/dist/extras/named-exports.min.js"></script>
   <% } %>
 </head>
-<body>
+<body style="min-height: calc(100vh - 4rem); background: #f8f9fa; margin: 2rem 0;">
   <script>
     System.import('@kombucha/root-config');
   </script>
