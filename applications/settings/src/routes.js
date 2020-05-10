@@ -1,7 +1,7 @@
 import angular from "angular";
 import "./root.component.js";
-import "./subroute1.component.js";
-import "./subroute2.component.js";
+import "./profile.component.js";
+import "./account.component.js";
 
 angular.module("app").config(($stateProvider, $locationProvider) => {
   $stateProvider
@@ -9,13 +9,13 @@ angular.module("app").config(($stateProvider, $locationProvider) => {
       url: "/",
       template: "<root />",
     })
-    .state("one", {
-      url: "/settings/subroute1",
-      template: "<subroute1 />",
+    .state("profile", {
+      url: "/settings",
+      template: "<profile />",
     })
-    .state("two", {
-      url: "/settings/subroute2",
-      template: "<subroute2 />",
+    .state("account", {
+      url: "/settings/account",
+      template: "<account />",
     });
 
   $locationProvider.html5Mode({ enabled: true, requireBase: false });

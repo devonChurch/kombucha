@@ -2,15 +2,27 @@ import angular from "angular";
 
 angular.module("app").component("root", {
   template: `
-    <div style="margin-top: 100px;">
-        This was rendered by App3 which is written in Angular 1.6
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <div class="alert alert-danger">
+                Angular Application
+            </div>
+
+            <nav class="navbar navbar-light mb-3 bg-light">
+                <span class="navbar-brand flex-grow-1">Settings</span>
+                <!-- -->
+                <a ui-sref="profile" class="nav-link">Profile</a>
+                <a ui-sref="account" class="nav-link">Account</a>
+            </nav>
+            
+            <div>
+                <ui-view></ui-view>
+            </div>
+            
+        </div>
     </div>
-
-    <a ui-sref="one">Subroute 1</a>
-    <a ui-sref="two">Subroute 2</a>
-    
-    <ui-view></ui-view>
-
+</div>
 `,
   controllerAs: "vm",
   controller($timeout) {
