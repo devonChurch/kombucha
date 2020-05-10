@@ -38,10 +38,26 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.3.1/dist/extras/named-exports.min.js"></script>
   <% } %>
 </head>
-<body style="min-height: calc(100vh - 4rem); background: #f8f9fa; margin: 2rem 0;">
+<body style="min-height: 100vh; background: #f8f9fa;">
   <script>
     System.import('@kombucha/root-config');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+  <!--  -->
+  <nav id="global-nav" class="navbar navbar-dark mb-3 bg-dark">
+    <span class="navbar-brand flex-grow-1">Micro Front-ends</span>
+    <!-- -->
+    <a href="/" class="nav-link">Products</a>
+    <a href="/settings" class="nav-link">Settings</a>
+
+    <script>
+      document.querySelectorAll('#global-nav a').forEach(element => {
+        element.addEventListener('click', (event) => {
+          event.preventDefault();
+          window.history.pushState({}, '', element.getAttribute('href'));
+        })
+      })
+    </script>
+  </nav>
 </body>
 </html>
