@@ -2,25 +2,18 @@ import angular from "angular";
 
 angular.module("app").component("root", {
   template: `
-            <div style="margin-top: 100px;">
-              This was rendered by App3 which is written in Angular 1.6
-            </div>
+    <div style="margin-top: 100px;">
+        This was rendered by App3 which is written in Angular 1.6
+    </div>
 
-            <a ui-sref="one">Subroute 1</a>
-<a ui-sref="two">Subroute 2</a>
-            
-            <ui-view></ui-view>
+    <a ui-sref="one">Subroute 1</a>
+    <a ui-sref="two">Subroute 2</a>
+    
+    <ui-view></ui-view>
 
-        `,
+`,
   controllerAs: "vm",
   controller($timeout) {
     const vm = this;
   },
 });
-
-/* 
-<a href="#/app3/subroute1">Subroute 1</a>
-<a href="#/app3/subroute2">Subroute 2</a>
-
-<ui-view />
-*/
