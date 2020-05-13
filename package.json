@@ -50,6 +50,7 @@
     "@types/webpack-env": "^1.15.1"
   },
   "workspaces": [
-    "applications/*"
+    "applications/*",
+    "parcels/*"
   ]
 }
