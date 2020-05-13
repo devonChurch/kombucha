@@ -69,3 +69,6 @@ dist
 *.njsproj
 *.sln
 *.sw?
+
+# MacOS
+.DS_Store
