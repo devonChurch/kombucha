@@ -3,7 +3,6 @@ const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = (webpackConfigEnv) => {
-  console.log("Webpack Config", webpackConfigEnv);
 
   const defaultConfig = singleSpaDefaults({
     orgName: "kombucha",
@@ -12,7 +11,6 @@ module.exports = (webpackConfigEnv) => {
   });
 
   return webpackMerge.smart(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
     devServer: {
       historyApiFallback: true,
       headers: {
