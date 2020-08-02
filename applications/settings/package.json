@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "watch:portal": "webpack-dev-server --port 9003",
-    "build:portal": "webpack -p --progress"
+    "watch": "webpack-dev-server --port 9003",
+    "build": "webpack -p --progress",
+    "deploy": "npx http-server ./dist --port=5001 --cors"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",

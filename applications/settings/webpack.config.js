@@ -1,12 +1,9 @@
 const path = require("path");
-// const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 
 module.exports = {
-  entry: {
-    singleSpaEntry: "src/singleSpaEntry.js",
-  },
+  entry: "src/singleSpaEntry.js",
   output: {
-    filename: "[name].js",
+    filename: "app.js",
     path: path.resolve(__dirname, "dist"),
     libraryTarget: "umd",
     library: "@kombucha/settings",
