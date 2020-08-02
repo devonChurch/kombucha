@@ -21,6 +21,12 @@ registerApplication({
   activeWhen: (location) => location.pathname.startsWith("/settings"),
 });
 
+registerApplication({
+  name: "@kombucha/create",
+  app: () => System.import("@kombucha/create"),
+  activeWhen: (location) => location.pathname.startsWith("/create"),
+});
+
 start({
   urlRerouteOnly: true,
 });
